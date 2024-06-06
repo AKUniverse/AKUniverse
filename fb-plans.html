@@ -1,77 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Plan</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .highlight {
-            background-color: #ffd700;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Plans - AK Universe</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .payment-option {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-
-<div class="container">
-    <h1>Payment Plan</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Installment</th>
-                <th>Date</th>
-                <th>Amount</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>June 15, 2024</td>
-                <td>$100</td>
-            </tr>
-            <tr class="highlight">
-                <td>2</td>
-                <td>July 15, 2024</td>
-                <td>$100</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>August 15, 2024</td>
-                <td>$100</td>
-            </tr>
-            <!-- Add more rows for additional installments -->
-        </tbody>
-    </table>
-</div>
-
+  <div class="container">
+    <h1 class="mt-5">Payment Plans</h1>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="payment-option">
+          <h2>12 Hours Trial</h2>
+          <p>Free</p>
+          <a href="https://wa.me/923063294901?text=I%20want%20to%20subscribe%20to%20the%2012%20Hours%20Trial" class="btn btn-primary" target="_blank">Subscribe via WhatsApp</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="payment-option">
+          <h2>1 Month Plan</h2>
+          <p>$18</p>
+          <a href="https://wa.me/923063294901?text=I%20want%20to%20subscribe%20to%20the%201%20Month%20Plan" class="btn btn-primary" target="_blank">Subscribe via WhatsApp</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="payment-option">
+          <h2>3 Month Plan</h2>
+          <p>$45</p>
+          <a href="https://wa.me/923063294901?text=I%20want%20to%20subscribe%20to%20the%203%20Month%20Plan" class="btn btn-primary" target="_blank">Subscribe via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <h2 class="mt-5">Payment Methods</h2>
+    <ul>
+      <li>Pakistani Payment Method: Bank Transfer, Easypaisa, Jazzcash</li>
+      <li>Indian Payment Method: UPI, Paytm, Google Pay, Bank Transfer</li>
+      <li>International Payment Method: Credit/Debit Cards</li>
+    </ul>
+    <p>Contact us on WhatsApp: <a href="https://wa.me/923063294901" target="_blank">+923063294901</a></p>
+    <p>Company Name: AK Universe</p>
+  </div>
 </body>
 </html>
