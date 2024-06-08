@@ -8,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
-        /* Custom Styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
@@ -22,6 +21,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            transition: box-shadow 0.3s;
         }
         .plan-card:hover {
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -30,56 +30,60 @@
             padding: 20px;
         }
         .btn-whatsapp {
-            background-color: #25d366;
+            background-color: #008d34;
             color: #fff;
             border: none;
             font-size: 1.2rem;
             padding: 15px 30px;
+            transition: background-color 0.3s;
         }
         .btn-whatsapp:hover {
             background-color: #128c7e;
         }
-        h1 {
+        h1, h2 {
             text-align: center;
-            margin-bottom: 30px;
-        }
-        .payment-plans {
             margin-bottom: 30px;
         }
         .list-group-item {
             border: none;
             padding: 10px;
         }
-        .contact-section {
-            text-align: center;
+        .contact-section, .features-section {
             margin-top: 50px;
             border-top: 1px solid #ccc;
             padding-top: 30px;
         }
-        .contact-info {
+        .contact-info, .feature-title {
             font-size: 1.2rem;
-        }
-        .features-section {
-            margin-top: 50px;
-            border-top: 1px solid #ccc;
-            padding-top: 30px;
-        }
-        .feature-item {
-            margin-bottom: 20px;
-        }
-        .feature-title {
             font-weight: bold;
-            font-size: 1.2rem;
         }
         .feature-description {
             margin-top: 10px;
+        }
+        .video-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+        .video-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>AK Universe Payment Plans</h1>
-        
+        <h1>Facebook Automation Bot</h1>
+
+        <!-- Responsive Video Embed -->
+        <div class="video-responsive">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/L88pYJrvIrA?si=stejhvHdlSBc7v7z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
         <!-- Payment Plans -->
         <div class="row payment-plans">
             <div class="col-md-12">
@@ -87,20 +91,20 @@
                     <div class="card-body">
                         <h3 class="card-title text-center">Payment Plans</h3>
                         <ul class="list-group">
-                            <li class="list-group-item">12-Hour Trial: Free</li>
-                            <li class="list-group-item">Monthly Plan: $18</li>
-                            <li class="list-group-item">Quarterly Plan: $45</li>
+                            <li class="list-group-item">12-Hour Free Trial: Experience Our Service at No Cost</li>
+                            <li class="list-group-item">Individual Monthly Plan: $18 per user</li>
+                            <li class="list-group-item">Team Monthly Plan: $45 for up to 3 users</li>
                         </ul>
-                        <p class="text-center">
+                        <div class="text-center mt-3">
                             <a href="https://wa.me/+923063294901?text=I%20would%20like%20to%20subscribe%20to%20AK%20Universe%20Plan" class="btn btn-whatsapp">Subscribe via WhatsApp</a>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Regional Plans -->
         <div class="row">
-            <!-- Pakistani Plans -->
             <div class="col-md-4">
                 <div class="plan-card">
                     <div class="card-body">
@@ -114,7 +118,6 @@
                 </div>
             </div>
 
-            <!-- Indian Plans -->
             <div class="col-md-4">
                 <div class="plan-card">
                     <div class="card-body">
@@ -129,7 +132,6 @@
                 </div>
             </div>
 
-            <!-- International Plans -->
             <div class="col-md-4">
                 <div class="plan-card">
                     <div class="card-body">
@@ -144,7 +146,7 @@
 
         <!-- Features Section -->
         <div class="features-section">
-            <h2 class="text-center mb-4">Key Features for New Subscribers:</h2>
+            <h2>Key Features for New Subscribers</h2>
             <div class="feature-item">
                 <p class="feature-title">Marketplace, Put Unlimited Ads Automate</p>
                 <p class="feature-description">Easily automate the process of putting unlimited ads on the marketplace.</p>
@@ -172,13 +174,13 @@
             <div class="feature-item">
                 <p class="feature-title">Error Handling and User Feedback</p>
                 <p class="feature-description">Offer informative error messages and user feedback to assist users in troubleshooting issues effectively and improving overall user experience.</p>
-                </div>
-                </div>
-                
-                <!-- Contact Section -->
-    <div class="contact-section">
-        <p class="contact-info">For development inquiries or any kind of program application, contact us at <strong>+923063294901</strong>.</p>
+            </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <p class="contact-info">For development inquiries or any kind of program application, contact us at <strong>+923063294901</strong>.</p>
+        </div>
     </div>
-</div>
 </body>
 </html>
