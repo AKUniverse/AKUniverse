@@ -30,7 +30,7 @@
             padding: 20px;
         }
         .btn-whatsapp {
-            background-color: #25d366;
+            background-color: #008d34;
             color: #fff;
             border: none;
             font-size: 1.2rem;
@@ -60,12 +60,30 @@
         .feature-description {
             margin-top: 10px;
         }
+        .video-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+        .video-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Facebook Automation Bot</h1>
-        
+
+        <!-- Responsive Video Embed -->
+        <div class="video-responsive">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/L88pYJrvIrA?si=stejhvHdlSBc7v7z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
         <!-- Payment Plans -->
         <div class="row payment-plans">
             <div class="col-md-12">
@@ -73,9 +91,9 @@
                     <div class="card-body">
                         <h3 class="card-title text-center">Payment Plans</h3>
                         <ul class="list-group">
-                            <li class="list-group-item">12-Hour Trial: Free</li>
-                            <li class="list-group-item">Monthly Plan: $18</li>
-                            <li class="list-group-item">Quarterly Plan: $45</li>
+                            <li class="list-group-item">12-Hour Free Trial: Experience Our Service at No Cost</li>
+                            <li class="list-group-item">Individual Monthly Plan: $18 per user</li>
+                            <li class="list-group-item">Team Monthly Plan: $45 for up to 3 users</li>
                         </ul>
                         <div class="text-center mt-3">
                             <a href="https://wa.me/+923063294901?text=I%20would%20like%20to%20subscribe%20to%20AK%20Universe%20Plan" class="btn btn-whatsapp">Subscribe via WhatsApp</a>
