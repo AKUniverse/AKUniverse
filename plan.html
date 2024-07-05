@@ -3,184 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Automation Bot</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <title>Facebook Automation Bot v3.0 - Download Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
         }
         .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        .plan-card {
+            background-color: #ffffff;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            transition: box-shadow 0.3s;
-        }
-        .plan-card:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-        .card-body {
-            padding: 20px;
-        }
-        .btn-whatsapp {
-            background-color: #008d34;
-            color: #fff;
-            border: none;
-            font-size: 1.2rem;
-            padding: 15px 30px;
-            transition: background-color 0.3s;
-        }
-        .btn-whatsapp:hover {
-            background-color: #128c7e;
-        }
-        h1, h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .list-group-item {
-            border: none;
-            padding: 10px;
-        }
-        .contact-section, .features-section {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             margin-top: 50px;
-            border-top: 1px solid #ccc;
-            padding-top: 30px;
         }
-        .contact-info, .feature-title {
-            font-size: 1.2rem;
-            font-weight: bold;
+        h1 {
+            margin-bottom: 20px;
         }
-        .feature-description {
-            margin-top: 10px;
+        p, li {
+            font-size: 1.1em;
         }
-        .video-responsive {
-            overflow: hidden;
-            padding-bottom: 56.25%;
-            position: relative;
-            height: 0;
+        .download-btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
         }
-        .video-responsive iframe {
-            left: 0;
-            top: 0;
-            height: 100%;
+        .video-container {
+            margin-top: 30px;
+        }
+        iframe {
             width: 100%;
-            position: absolute;
+            height: 400px;
+            border: none;
+        }
+        .animated-text {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 20px 0;
+            animation: fadeIn 3s infinite;
+        }
+        @keyframes fadeIn {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        .whatsapp-btn {
+            margin-top: 20px;
+            font-size: 1.2em;
+            padding: 10px 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container text-center">
         <h1>Facebook Automation Bot</h1>
-
-        <!-- Responsive Video Embed -->
-        <div class="video-responsive">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/L88pYJrvIrA?si=stejhvHdlSBc7v7z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="animated-text">Powered by AK Universe, WhatsApp +92 306-3294901</div>
+        <p class="lead">Follow these steps to get started:</p>
+        <ol class="text-left mx-auto" style="max-width: 600px;">
+            <li>First, click on the download button below to download the app.zip file.</li>
+            <li>Then, extract the app.zip file.</li>
+            <li>Open the application and enter your key. Done!</li>
+        </ol>
+        <p class="lead">For more details, you can watch the video below:</p>
+        <a href="https://drive.usercontent.google.com/download?id=1rRjfgKqg3sSMIkMAGHsDmMEUHA6_3F65&export=download&authuser=0&confirm=t&uuid=7aceec42-67df-4a40-9a84-c532b4f56c10&at=APZUnTXqWDJbc2ZvpXm1SVXvJUGM%3A1720162286812" class="btn btn-primary download-btn" download>Download App.zip</a>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/P_kjumbykvw?si=7-D6Ge7xoDV8m6t6" allowfullscreen></iframe>
         </div>
-
-        <!-- Payment Plans -->
-        <div class="row payment-plans">
-            <div class="col-md-12">
-                <div class="plan-card">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Payment Plans</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item">12-Hour Free Trial: Experience Our Service at No Cost</li>
-                            <li class="list-group-item">Individual Monthly Plan: $18 per user</li>
-                            <li class="list-group-item">Team Monthly Plan: $45 for up to 3 users</li>
-                        </ul>
-                        <div class="text-center mt-3">
-                            <a href="https://wa.me/+923063294901?text=I%20would%20like%20to%20subscribe%20to%20AK%20Universe%20Plan" class="btn btn-whatsapp">Subscribe via WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Regional Plans -->
-        <div class="row">
-            <div class="col-md-4">
-                <div class="plan-card">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Pakistani Plans</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item">Bank Transfer</li>
-                            <li class="list-group-item">Easypaisa</li>
-                            <li class="list-group-item">Jazzcash</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="plan-card">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Indian Plans</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item">UPI</li>
-                            <li class="list-group-item">Paytm</li>
-                            <li class="list-group-item">Google Pay</li>
-                            <li class="list-group-item">Bank Transfer</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="plan-card">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">International Plans</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item">Credit/Debit Cards</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Features Section -->
-        <div class="features-section">
-            <h2>Key Features for New Subscribers</h2>
-            <div class="feature-item">
-                <p class="feature-title">Marketplace, Put Unlimited Ads Automate</p>
-                <p class="feature-description">Easily automate the process of putting unlimited ads on the marketplace.</p>
-            </div>
-            <div class="feature-item">
-                <p class="feature-title">Facebook Automation Bot</p>
-                <p class="feature-description">Securely automate various Facebook operations such as posting and browsing, with secure login using authentication keys.</p>
-            </div>
-            <div class="feature-item">
-                <p class="feature-title">Flexible Configuration Options</p>
-                <p class="feature-description">Allow users to customize parameters such as email, password, access token, item details, and more for enhanced flexibility.</p>
-            </div>
-            <div class="feature-item">
-                <p class="feature-title">Image Upload and Management</p>
-                <p class="feature-description">Effortlessly upload and manage multiple images within the application for better control and organization.</p>
-            </div>
-            <div class="feature-item">
-                <p class="feature-title">Check for Updates</p>
-                <p class="feature-description">Automatically check for updates and download the latest version to ensure your application is always up-to-date.</p>
-            </div>
-            <div class="feature-item">
-                <p class="feature-title">Key Management and Security</p>
-                <p class="feature-description">Provide a robust key management system for secure access to the application, with tracking of key usage and expiration for enhanced security.</p>
-            </div>
-            <div class="feature-item">
-                <p class="feature-title">Error Handling and User Feedback</p>
-                <p class="feature-description">Offer informative error messages and user feedback to assist users in troubleshooting issues effectively and improving overall user experience.</p>
-            </div>
-        </div>
-        
-        <!-- Contact Section -->
-        <div class="contact-section">
-            <p class="contact-info">For development inquiries or any kind of program application, contact us at <strong>+923063294901</strong>.</p>
-        </div>
+        <a href="https://wa.me/923063294901" class="btn btn-success whatsapp-btn">Contact on WhatsApp</a>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
