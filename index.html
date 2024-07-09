@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Buttons</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-buttons">
+        <button class="section-button active" onclick="showSection('section1', this)">Section 1</button>
+        <button class="section-button" onclick="showSection('section2', this)">Section 2</button>
+        <button class="section-button" onclick="showSection('section3', this)">Section 3</button>
+    </div>
+    <div class="container">
+        <div class="section" id="section1">
+            <h2>Buttons Section</h2>
+            <div class="row">
+                <button class="futuristic-button" onclick="copyToClipboard('How are you', 'Hry')">Hry</button>
+                <button class="futuristic-button" onclick="copyToClipboard('Hello World', 'Hld')">Hld</button>
+                <button class="futuristic-button" onclick="copyToClipboard('OpenAI GPT', 'Ogt')">Ogt</button>
+                <button class="futuristic-button" onclick="copyToClipboard('Copy Text', 'Cpt')">Cpt</button>
+            </div>
+        </div>
+        <div class="section" id="section2" style="display:none;">
+            <h2>Mattress Prices Canada, WhatsApp +923063294901</h2>
+           
+           
+
+            <label for="priceModifier">Enter number to modify prices: </label>
+            <input type="number" id="priceModifier" value="10" onchange="savePriceModifier()">
+
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Single/Twin, 75/38cm</th>
+                        <th>Double/Full, 75/54cm</th>
+                        <th>Queen 80/60cm</th>
+                        <th>King 80/76cm</th>
+                        <th>Warranty Years</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5"><strong>Foam mattress *</strong></td>
+                    </tr>
+                    <tr>
+                        <td>5" Foam Mattress</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size foam mattress with a 5-inch depth.', 110)">$<span id="price1-1">110</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size foam mattress with a 5-inch depth.', 140)">$<span id="price1-2">140</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size foam mattress with a 5-inch depth.', 180)">$<span id="price1-3">180</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size foam mattress with a 5-inch depth.', 270)">$<span id="price1-4">270</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>7" Bamboo Foam</td>
+                        <td onclick="copyToClipboardWithNotification('7 Bamboo Foam', 175)">$<span id="price2-1">175</span></td>
+                        <td onclick="copyToClipboardWithNotification('7 Bamboo Foam', 200)">$<span id="price2-2">200</span></td>
+                        <td onclick="copyToClipboardWithNotification('7 Bamboo Foam', 240)">$<span id="price2-3">240</span></td>
+                        <td onclick="copyToClipboardWithNotification('7 Bamboo Foam', 320)">$<span id="price2-4">320</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>10" Smooth top Foam</td>
+                        <td onclick="copyToClipboardWithNotification('10 Smooth top Foam', 190)">$<span id="price3-1">190</span></td>
+                        <td onclick="copyToClipboardWithNotification('10 Smooth top Foam', 240)">$<span id="price3-2">240</span></td>
+                        <td onclick="copyToClipboardWithNotification('10 Smooth top Foam', 275)">$<span id="price3-3">275</span></td>
+                        <td onclick="copyToClipboardWithNotification('10 Smooth top Foam', 370)">$<span id="price3-4">370</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td>9.5" Europlush Mattress (Eurotop)</td>
+                        <td onclick="copyToClipboardWithNotification('9.5 Europlush Mattress (Eurotop)', 310)">$<span id="price4-1">310</span></td>
+                        <td onclick="copyToClipboardWithNotification('9.5 Europlush Mattress (Eurotop)', 350)">$<span id="price4-2">350</span></td>
+                        <td onclick="copyToClipboardWithNotification('9.5 Europlush Mattress (Eurotop)', 390)">$<span id="price4-3">390</span></td>
+                        <td onclick="copyToClipboardWithNotification('9.5 Europlush Mattress (Eurotop)', 530)">$<span id="price4-4">530</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><strong>Exfirm mattress*</strong></td>
+                    </tr>
+                    <tr>
+                        <td>7" Ex Firm mattress</td>
+                        <td onclick="copyToClipboardWithNotification('7 Ex Firm mattress', 220)">$<span id="price5-1">220</span></td>
+                        <td onclick="copyToClipboardWithNotification('7 Ex Firm mattress', 290)">$<span id="price5-2">290</span></td>
+                        <td onclick="copyToClipboardWithNotification('7 Ex Firm mattress', 350)">$<span id="price5-3">350</span></td>
+                        <td onclick="copyToClipboardWithNotification('7 Ex Firm mattress', 470)">$<span id="price5-4">470</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td>10" Double sided (Rock and Rose)</td>
+                        <td onclick="copyToClipboardWithNotification('10 Double sided (Rock and Rose)', 370)">$<span id="price6-1">370</span></td>
+                        <td onclick="copyToClipboardWithNotification('10 Double sided (Rock and Rose)', 410)">$<span id="price6-2">410</span></td>
+                        <td onclick="copyToClipboardWithNotification('10 Double sided (Rock and Rose)', 470)">$<span id="price6-3">470</span></td>
+                        <td onclick="copyToClipboardWithNotification('10 Double sided (Rock and Rose)', 590)">$<span id="price6-4">590</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><strong>Spring mattress*</strong></td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>9.5" Orthopedic spring</td>
+                        <td onclick="copyToClipboardWithNotification('9.5 Orthopedic spring', 195)">$<span id="price7-1">195</span></td>
+                        <td onclick="copyToClipboardWithNotification('9.5 Orthopedic spring', 210)">$<span id="price7-2">210</span></td>
+                        <td onclick="copyToClipboardWithNotification('9.5 Orthopedic spring', 230)">$<span id="price7-3">230</span></td>
+                        <td onclick="copyToClipboardWithNotification('9.5 Orthopedic spring', 320)">$<span id="price7-4">320</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>10" Slumberplus (euro top)</td>
+                        <td onclick="copyToClipboardWithNotification('10 Slumberplus (euro top)', 210)">$<span id="price8-1">210</span></td>
+                        <td onclick="copyToClipboardWithNotification('10 Slumberplus (euro top)', 250)">$<span id="price8-2">250</span></td>
+                        <td onclick="copyToClipboardWithNotification('10 Slumberplus (euro top)', 280)">$<span id="price8-3">280</span></td>
+                        <td onclick="copyToClipboardWithNotification('10 Slumberplus (euro top)', 390)">$<span id="price8-4">390</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>12" Slumberplus (euro top)</td>
+                        <td onclick="copyToClipboardWithNotification('12 Slumberplus (euro top)', 280)">$<span id="price9-1">280</span></td>
+                        <td onclick="copyToClipboardWithNotification('12 Slumberplus (euro top)', 340)">$<span id="price9-2">340</span></td>
+                        <td onclick="copyToClipboardWithNotification('12 Slumberplus (euro top)', 410)">$<span id="price9-3">410</span></td>
+                        <td onclick="copyToClipboardWithNotification('12 Slumberplus (euro top)', 490)">$<span id="price9-4">490</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><strong>Pocket coil mattress* (Roll Pack)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>9" Pocket coil</td>
+                        <td onclick="copyToClipboardWithNotification('9 Pocket coil', 270)">$<span id="price10-1">270</span></td>
+                        <td onclick="copyToClipboardWithNotification('9 Pocket coil', 310)">$<span id="price10-2">310</span></td>
+                        <td onclick="copyToClipboardWithNotification('9 Pocket coil', 370)">$<span id="price10-3">370</span></td>
+                        <td onclick="copyToClipboardWithNotification('9 Pocket coil', 20)">$<span id="price10-4">20</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td>11" Pocket coil</td>
+                        <td onclick="copyToClipboardWithNotification('11 Pocket coil', 300)">$<span id="price11-1">300</span></td>
+                        <td onclick="copyToClipboardWithNotification('11 Pocket coil', 350)">$<span id="price11-2">350</span></td>
+                        <td onclick="copyToClipboardWithNotification('11 Pocket coil', 420)">$<span id="price11-3">420</span></td>
+                        <td onclick="copyToClipboardWithNotification('11 Pocket coil', 530)">$<span id="price11-4">530</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><strong>Memory Foam Mattress* (Roll Pack)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>6" Memory white</td>
+                        <td onclick="copyToClipboardWithNotification('6 Memory white', 170)">$<span id="price12-1">170</span></td>
+                        <td onclick="copyToClipboardWithNotification('6 Memory white', 20)">$<span id="price12-2">20</span></td>
+                        <td onclick="copyToClipboardWithNotification('6 Memory white', 300)">$<span id="price12-3">300</span></td>
+                        <td onclick="copyToClipboardWithNotification('6 Memory white', 400)">$<span id="price12-4">400</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>8" Memory white</td>
+                        <td onclick="copyToClipboardWithNotification('8 Memory white', 220)">$<span id="price13-1">220</span></td>
+                        <td onclick="copyToClipboardWithNotification('8 Memory white', 300)">$<span id="price13-2">300</span></td>
+                        <td onclick="copyToClipboardWithNotification('8 Memory white', 350)">$<span id="price13-3">350</span></td>
+                        <td onclick="copyToClipboardWithNotification('8 Memory white', 420)">$<span id="price13-4">420</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>10" Memory white</td>
+                        <td onclick="copyToClipboardWithNotification('10 Memory white', 20)">$<span id="price14-1">20</span></td>
+                        <td onclick="copyToClipboardWithNotification('10 Memory white', 320)">$<span id="price14-2">320</span></td>
+                        <td onclick="copyToClipboardWithNotification('10 Memory white', 400)">$<span id="price14-3">400</span></td>
+                        <td onclick="copyToClipboardWithNotification('10 Memory white', 20)">$<span id="price14-4">20</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><strong>Box Spring*</strong></td>
+                    </tr>
+                    <tr>
+                        <td>4" Box spring (special request)</td>
+                        <td onclick="copyToClipboardWithNotification('4 Box spring (special request)', 20)">$<span id="price15-1">20</span></td>
+                        <td onclick="copyToClipboardWithNotification('4 Box spring (special request)', 20)">$<span id="price15-2">20</span></td>
+                        <td onclick="copyToClipboardWithNotification('4 Box spring (special request)', 20)">$<span id="price15-3">20</span></td>
+                        <td onclick="copyToClipboardWithNotification('4 Box spring (special request)', 20)">$<span id="price15-4">20</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>4" Box spring split (special request)</td>
+                        <td onclick="copyToClipboardWithNotification('4 Box spring split (special request)', 20)">$<span id="price16-1">20</span></td>
+                        <td onclick="copyToClipboardWithNotification('4 Box spring split (special request)', 20)">$<span id="price16-2">20</span></td>
+                        <td onclick="copyToClipboardWithNotification('4 Box spring split (special request)', 20)">$<span id="price16-3">20</span></td>
+                        <td onclick="copyToClipboardWithNotification('4 Box spring split (special request)', 20)">$<span id="price16-4">20</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>6" Box spring</td>
+                        <td onclick="copyToClipboardWithNotification('6 Box spring', 120)">$<span id="price17-1">120</span></td>
+                        <td onclick="copyToClipboardWithNotification('6 Box spring', 140)">$<span id="price17-2">140</span></td>
+                        <td onclick="copyToClipboardWithNotification('6 Box spring', 155)">$<span id="price17-3">155</span></td>
+                        <td onclick="copyToClipboardWithNotification('6 Box spring', 20)">$<span id="price17-4">20</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>6" Box spring split</td>
+                        <td onclick="copyToClipboardWithNotification('6 Box spring split', 140)">$<span id="price18-1">140</span></td>
+                        <td onclick="copyToClipboardWithNotification('6 Box spring split', 190)">$<span id="price18-2">190</span></td>
+                        <td onclick="copyToClipboardWithNotification('6 Box spring split', 200)">$<span id="price18-3">200</span></td>
+                        <td onclick="copyToClipboardWithNotification('6 Box spring split', 20)">$<span id="price18-4">20</span></td>
+                        <td>n/a</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section" id="section3" style="display:none;">
+            <h2>Section 3</h2>
+            <!-- Blank section for future content -->
+        </div>
+    </div>
+    <div id="notification-container" class="notification-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
