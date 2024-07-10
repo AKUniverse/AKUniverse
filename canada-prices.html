@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canada Prices</title>
+    <link rel="stylesheet" href="css/canada-price-styles.css">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dc1q32wzt/image/upload/v1685918602/icon_ameer_w_adrrbk.ico">
+</head>
+<body>
+    <div class="top-buttons">
+        <button class="section-button active" onclick="showSection('section1', this)">Frames</button>
+        <button class="section-button" onclick="showSection('section2', this)">Mattresses</button>
+        <button class="section-button" onclick="showSection('section3', this)">Sofas</button>
+        <button class="section-button" onclick="showSection('section4', this)">Dinning/Tables</button>
+   
+    </div>
+    <div class="container">
+
+
+
+
+
+
+
+
+
+        <div class="section" id="section1">
+            <h2>Frames Section</h2>
+            <label for="priceModifier">Set Commission: </label>
+            <input type="number" id="priceModifier" value="30" onchange="savePriceModifier()">
+            <div class="row">
+                <div class="frame-item">
+                    <img src="assets/canada-beds/black-leather.jfif" alt="Frame 1" class="frame-image">
+                    <h3>PLAIN BLACK</h3>
+                    <label>BLACK VELVET, PLAIN HEADBOARD</label>
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Single-size Frame', 240)">Single/Twin $240</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full size Frame', 270)">Double/Full $270</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 300)">Queen $300</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('King-size Frame', 400)">King $400</button>
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Lumier leather black.jfif" alt="Frame 1" class="frame-image">
+                    <h3>LUMIERE LEATHER BLACK</h3>
+                    <label>FACTORY LEATHER, DOESN'T NEED A BOXSPRING</label>
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Single-size Frame', 290)">Single/Twin $290</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full size Frame', 320)">Double/Full $320</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 330)">Queen $330</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('King-size Frame', 370)">King $370</button>
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/SOLO BLUE.jfif" alt="Frame 1" class="frame-image">
+                    <h3>SOLO BLUE</h3>
+                    <label>BLUE VELVET, ADJUSTABLE HEADBOARD,  DOES NOT NEED BOXSPRING. DIAMOND DECORATION.</label>
+                    <div class="button-group">
+                       
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full size Frame', 350)">Double/Full $350</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 370)">Queen $370</button>
+                       
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/RUBY BLACK.jfif" alt="Frame 1" class="frame-image">
+                    <h3>RUBY BLACK</h3>
+                    <label>BLACK VELVET, ADJUSTABLE HEADBOARD, DOES NOT NEED BOXSPRING. BUTTON DECORATION.</label>
+                    <div class="button-group">
+                      
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full size Frame', 350)">Double/Full $350</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 370)">Queen $370</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('King-size Frame', 450)">King $450</button>
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/solo black.jfif" alt="Frame 1" class="frame-image">
+                    <h3>SOLO BLACK</h3>
+                    <label>BLACK VELVET, ADJUSTABLE HEADBOARD,  DOES NOT NEED BOXSPRING. DIAMOND DECORATION.</label>
+                    <div class="button-group">
+                       
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-Size size Frame', 370)">Double/Full $370</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('King-size Frame', 450)">Queen $450</button>
+                       
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/metal frame.jfif" alt="Frame 1" class="frame-image">
+                    <h3>METAL BEDFRAME</h3>
+                    <label>METAL WHITE DOSE NOT NEED A BOX. COMES IN SMALL BOX.</label>
+                    <div class="button-group">
+                      
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Single/Twin size Frame', 210)">Single/Twin $210</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full Frame', 230)">Double/Full $230</button>
+                       
+                    </div>
+                </div>
+
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Beverly.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Beverly</h3>
+                    
+                    <div class="button-group">
+                       
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('King-Size size Bed', 370)">King $370</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Dresser', 300)">Dresser $300</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Bed', 320)">Queen $320</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Mirror', 120)">Mirror $120</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Nightstand', 160)">Nightstand $160</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Chest', 270)">Chest $270</button>
+                       
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Derby.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Derby</h3>
+                    
+                    <div class="button-group">
+                       
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-Size size Bed', 380)">Queen $380</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Dresser', 320)">Dresser $320</button>
+                        
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Mirror', 120)">Mirror $120</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Nightstand', 160)">Nightstand $160</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Chest', 320)">Chest $320</button>
+                       
+                    </div>
+                </div>
+
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Penrith.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Penrith</h3>
+                    
+                    <div class="button-group">
+                       
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-Size size Bed', 370)">Queen $370</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Dresser', 440)">Dresser $440</button>
+                        
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Mirror', 120)">Mirror $120</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Nightstand', 150)">Nightstand $150</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Chest', 300)">Chest $300</button>
+                       
+                    </div>
+                </div>
+
+                <div class="frame-item">
+                    <img src="assets/canada-beds/white button.png" alt="Frame 1" class="frame-image">
+                   
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Single/Twin size Frame', 320)">Single/Twin $320</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full size Frame', 350)">Double/Full $350</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 380)">Queen $380</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('King-size Frame', 490)">King $490</button>
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/brown leather buttons.png" alt="Frame 1" class="frame-image">
+                   
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Single/Twin size Frame', 320)">Single/Twin $320</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full size Frame', 350)">Double/Full $350</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 380)">Queen $380</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('King-size Frame', 490)">King $490</button>
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/black valvet.jpg" alt="Frame 1" class="frame-image">
+                   
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Single/Twin size Frame', 230)">Single/Twin $230</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full size Frame', 260)">Double/Full $260</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 280)">Queen $280</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('King-size Frame', 370)">King $390</button>
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/wood metal bed.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Wood Metal Bed</h3>
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Single/Twin size Frame', 230)">Single/Twin $230</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full size Frame', 270)">Double/Full $270</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 300)">Queen $300</button>
+
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/wood metal bed 2.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Wood Metal Bed</h3>
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Single/Twin size Frame', 230)">Single/Twin $230</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full size Frame', 270)">Double/Full $270</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 300)">Queen $300</button>
+
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Picture2.png" alt="Frame 1" class="frame-image">
+                   
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Single/Twin size Frame', 320)">Single/Twin $320</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full size Frame', 360)">Double/Full $360</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 380)">Queen $380</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('King-size Frame', 490)">King $490</button>
+                    </div>
+                </div>
+                
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Picture4.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Light grey fabric Platform bed</h3>
+                    <div class="button-group">
+                      
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 270)">Queen $270</button>
+
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Picture5.jpg" alt="Frame 1" class="frame-image">
+                    <img src="assets/canada-beds/Picture6.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Black Leather  Platform bed </h3>
+                    <div class="button-group">
+                      
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 270)">Queen $270</button>
+
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Heavy metal  Platform bed.jpg" alt="Frame 1" class="frame-image">
+                    <img src="assets/canada-beds/Heavy metal  Platform bed 2.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Heavy metal  Platform bed</h3>
+                    <div class="button-group">
+                      
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 270)">Queen $270</button>
+
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Metal frame without support.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Metal frame without support</h3>
+                    <div class="button-group">
+                      
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Single/Twin size Frame', 120)">Single $120</button>
+
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Metal frame with support.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Metal frame with support</h3>
+                    <div class="button-group">
+                       
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full size Frame', 130)">Double/Full $130</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 130)">Queen $130</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('King-size Frame', 140)">King $140</button>
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Picture3.png" alt="Frame 1" class="frame-image">
+                   
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Single/Twin size Frame', 320)">Single/Twin $320</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full size Frame', 360)">Double/Full $360</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Queen-size Frame', 380)">Queen $380</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('King-size Frame', 490)">King $490</button>
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Bunk beds.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Bunk beds</h3>
+                    <div class="button-group">
+                      
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Single/Twin size Bunk Bed', 370)">Single/Twin $370</button>
+
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Bunk beds 2.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Bunk bed</h3>
+                    <div class="button-group">
+                      
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Single/Twin size Bunk Bed', 370)">Single/Twin $370</button>
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Double/Full size Bunk Bed', 400)">Double $400</button>
+
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/gaslift bed.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Gaslift</h3>
+                    <div class="button-group">
+                      
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('King-size size Bunk Bed', 470)">King $470</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="section" id="section2" style="display:none;">
+            <h2>Mattress Prices Canada, WhatsApp +923063294901</h2>
+           
+           
+
+            <label for="priceModifier">Set Commission: </label>
+            <input type="number" id="priceModifier" value="20" onchange="savePriceModifier()">
+            
+            <div class="row">
+                <div class="frame-item">
+                    <img src="assets/canada-beds/bio foam.PNG" alt="Frame 1" class="frame-image">
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/bamboo foam.PNG" alt="Frame 1" class="frame-image">
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/smooth top foam.PNG" alt="Frame 1" class="frame-image">
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/extra firm foam mattress.PNG" alt="Frame 1" class="frame-image">
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/9.5 mattress.PNG" alt="Frame 1" class="frame-image">
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/10 shumber plus.PNG" alt="Frame 1" class="frame-image">
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/12 shumber mattress.PNG" alt="Frame 1" class="frame-image">
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/pocket coil.PNG" alt="Frame 1" class="frame-image">
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/gel pocket coil.PNG" alt="Frame 1" class="frame-image">
+                </div>
+              
+            </div>
+
+           
+           
+       
+
+
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Single/Twin, 75/38cm</th>
+                        <th>Double/Full, 75/54cm</th>
+                        <th>Queen 80/60cm</th>
+                        <th>King 80/76cm</th>
+                        <th>Warranty Years</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5"><strong>Foam mattress *</strong></td>
+                    </tr>
+                    <tr>
+                        <td>5" Foam Mattress</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size foam mattress with a 5-inch depth.', 110)">$<span id="price1-1">110</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size foam mattress with a 5-inch depth.', 140)">$<span id="price1-2">140</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size foam mattress with a 5-inch depth.', 180)">$<span id="price1-3">180</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size foam mattress with a 5-inch depth.', 270)">$<span id="price1-4">270</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>7" Bamboo Foam</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size bamboo foam mattress with a 7-inch deep.', 175)">$<span id="price2-1">175</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size bamboo foam mattress with a 7-inch deep.', 200)">$<span id="price2-2">200</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size bamboo foam mattress with a 7-inch deep.', 240)">$<span id="price2-3">240</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size bamboo foam mattress with a 7-inch deep.', 320)">$<span id="price2-4">320</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>10" Smooth top Foam</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size smooth top foam mattress with a 10-inch deep and 10 years warranty.', 190)">$<span id="price3-1">190</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size smooth top foam mattress with a 10-inch deep and 10 years warranty.', 240)">$<span id="price3-2">240</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size smooth top foam mattress with a 10-inch deep and 10 years warranty.', 275)">$<span id="price3-3">275</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size smooth top foam mattress with a 10-inch deep and 10 years warranty.', 370)">$<span id="price3-4">370</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td>9.5" Europlush Mattress (Eurotop)</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size europlush mattress with a 9.5-inch deep (Eurotop) and 10 years warranty.', 310)">$<span id="price4-1">310</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size europlush mattress with a 9.5-inch deep (Eurotop) and 10 years warranty.', 350)">$<span id="price4-2">350</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size europlush mattress with a 9.5-inch deep (Eurotop) and 10 years warranty.', 390)">$<span id="price4-3">390</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size europlush mattress with a 9.5-inch deep (Eurotop) and 10 years warranty.', 530)">$<span id="price4-4">530</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><strong>Exfirm mattress*</strong></td>
+                    </tr>
+                    <tr>
+                        <td>7" Ex Firm mattress</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size ex-firm mattress with a 7-inch deep and 10 years warranty.', 220)">$<span id="price5-1">220</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size ex-firm mattress with a 7-inch deep and 10 years warranty.', 290)">$<span id="price5-2">290</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size ex-firm mattress with a 7-inch deep and 10 years warranty.', 350)">$<span id="price5-3">350</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size ex-firm mattress with a 7-inch deep and 10 years warranty.', 470)">$<span id="price5-4">470</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td>10" Double sided (Rock and Rose)</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size double sided mattress with a 10-inch deep (Rock and Rose) and 10 years warranty.', 370)">$<span id="price6-1">370</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size double sided mattress with a 10-inch deep (Rock and Rose) and 10 years warranty.', 410)">$<span id="price6-2">410</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size double sided mattress with a 10-inch deep (Rock and Rose) and 10 years warranty.', 470)">$<span id="price6-3">470</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size double sided mattress with a 10-inch deep (Rock and Rose) and 10 years warranty.', 590)">$<span id="price6-4">590</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><strong>Spring mattress*</strong></td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>9.5" Orthopedic spring</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size orthopedic spring mattress with a 9.5-inch deep and 10 years warranty.', 195)">$<span id="price7-1">195</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size orthopedic spring mattress with a 9.5-inch deep and 10 years warranty.', 210)">$<span id="price7-2">210</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size orthopedic spring mattress with a 9.5-inch deep and 10 years warranty.', 230)">$<span id="price7-3">230</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size orthopedic spring mattress with a 9.5-inch deep and 10 years warranty.', 320)">$<span id="price7-4">320</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>10" Slumberplus (euro top)</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size slumberplus mattress with a 10-inch deep (euro top) and 10 years warranty.', 210)">$<span id="price8-1">210</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size slumberplus mattress with a 10-inch deep (euro top) and 10 years warranty.', 250)">$<span id="price8-2">250</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size slumberplus mattress with a 10-inch deep (euro top) and 10 years warranty.', 280)">$<span id="price8-3">280</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size slumberplus mattress with a 10-inch deep (euro top) and 10 years warranty.', 390)">$<span id="price8-4">390</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>12" Slumberplus (euro top)</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size slumberplus mattress with a 12-inch deep (euro top) and 10 years warranty.', 280)">$<span id="price9-1">280</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size slumberplus mattress with a 12-inch deep (euro top) and 10 years warranty.', 340)">$<span id="price9-2">340</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size slumberplus mattress with a 12-inch deep (euro top) and 10 years warranty.', 410)">$<span id="price9-3">410</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size slumberplus mattress with a 12-inch deep (euro top) and 10 years warranty.', 490)">$<span id="price9-4">490</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><strong>Pocket coil mattress* (Roll Pack)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>9" Pocket coil</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size pocket coil mattress with a 9-inch deep and 10 years warranty.', 270)">$<span id="price10-1">270</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size pocket coil mattress with a 9-inch deep and 10 years warranty.', 310)">$<span id="price10-2">310</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size pocket coil mattress with a 9-inch deep and 10 years warranty.', 370)">$<span id="price10-3">370</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size pocket coil mattress with a 9-inch deep and 10 years warranty.', 420)">$<span id="price10-4">420</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td>11" Pocket coil</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size pocket coil mattress with an 11-inch deep and 10 years warranty.', 300)">$<span id="price11-1">300</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size pocket coil mattress with an 11-inch deep and 10 years warranty.', 350)">$<span id="price11-2">350</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size pocket coil mattress with an 11-inch deep and 10 years warranty.', 420)">$<span id="price11-3">420</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size pocket coil mattress with an 11-inch deep and 10 years warranty.', 530)">$<span id="price11-4">530</span></td>
+                        <td>10 year</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><strong>Memory Foam Mattress* (Roll Pack)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>6" Memory white</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size memory white mattress with a 6-inch deep.', 170)">$<span id="price12-1">170</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size memory white mattress with a 6-inch deep.', 220)">$<span id="price12-2">220</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size memory white mattress with a 6-inch deep.', 300)">$<span id="price12-3">300</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size memory white mattress with a 6-inch deep.', 400)">$<span id="price12-4">400</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>8" Memory white</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size memory white mattress with an 8-inch deep.', 220)">$<span id="price13-1">220</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size memory white mattress with an 8-inch deep.', 300)">$<span id="price13-2">300</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size memory white mattress with an 8-inch deep.', 350)">$<span id="price13-3">350</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size memory white mattress with an 8-inch deep.', 420)">$<span id="price13-4">420</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>10" Memory white</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size memory white mattress with a 10-inch deep.', 240)">$<span id="price14-1">240</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size memory white mattress with a 10-inch deep.', 320)">$<span id="price14-2">320</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size memory white mattress with a 10-inch deep.', 400)">$<span id="price14-3">400</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size memory white mattress with a 10-inch deep.', 490)">$<span id="price14-4">490</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><strong>Box Spring*</strong></td>
+                    </tr>
+                    <tr>
+                        <td>4" Box spring (special request)</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size 4-inch box spring (special request).', 100)">$<span id="price15-1">100</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size 4-inch box spring (special request).', 120)">$<span id="price15-2">120</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size 4-inch box spring (special request).', 140)">$<span id="price15-3">140</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size 4-inch box spring (special request).', 160)">$<span id="price15-4">160</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>4" Box spring split (special request)</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size 4-inch box spring split (special request).', 120)">$<span id="price16-1">120</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size 4-inch box spring split (special request).', 140)">$<span id="price16-2">140</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size 4-inch box spring split (special request).', 160)">$<span id="price16-3">160</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size 4-inch box spring split (special request).', 180)">$<span id="price16-4">180</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>6" Box spring</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size 6-inch box spring.', 120)">$<span id="price17-1">120</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size 6-inch box spring.', 140)">$<span id="price17-2">140</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size 6-inch box spring.', 155)">$<span id="price17-3">155</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size 6-inch box spring.', 170)">$<span id="price17-4">170</span></td>
+                        <td>n/a</td>
+                    </tr>
+                    <tr>
+                        <td>6" Box spring split</td>
+                        <td onclick="copyToClipboardWithNotification('Single-size 6-inch box spring split.', 140)">$<span id="price18-1">140</span></td>
+                        <td onclick="copyToClipboardWithNotification('Double/Full size 6-inch box spring split.', 190)">$<span id="price18-2">190</span></td>
+                        <td onclick="copyToClipboardWithNotification('Queen-size 6-inch box spring split.', 200)">$<span id="price18-3">200</span></td>
+                        <td onclick="copyToClipboardWithNotification('King-size 6-inch box spring split.', 220)">$<span id="price18-4">220</span></td>
+                        <td>n/a</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+
+        <div class="section" id="section3" style="display:none;">
+            <h2>Sofas</h2>
+            <label for="priceModifier">Set Commission: </label>
+            <input type="number" id="priceModifier" value="50" onchange="savePriceModifier()">
+            <div class="row">
+                <div class="frame-item">
+                    <img src="assets/canada-beds/KONYA.jfif" alt="Frame 1" class="frame-image">
+                    <h3>KONYA</h3>
+                
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Koniya design sofa', 670)">Sofa Price</button>
+                        
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Dark grey sofa fabric.jfif" alt="Frame 1" class="frame-image">
+                    <h3>Dark grey sofa fabric </h3>
+                    <label>Also Factory leather black</label>
+                    <label>Sectional 78x54</label>
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Dark grey sofa fabric and also Factory leather black available', 630)">Sofa Price</button>
+                        
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+
+        <div class="section" id="section4" style="display:none;">
+            <h2>Dinning and Tables</h2>
+            <label for="priceModifier">Set Commission: </label>
+            <input type="number" id="priceModifier" value="70" onchange="savePriceModifier()">
+            <div class="row">
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Coffee Table set of 3.jfif" alt="Frame 1" class="frame-image">
+                    <h3>Coffee Table set of 3</h3>
+                
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('Coffee Table set of 3', 170)">Coffee Table $170</button>
+                        
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Bremerton.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Bremerton</h3>
+                
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('7pc Set', 600)">7pc Set: $600</button>
+                        
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/Carason.jpg" alt="Frame 1" class="frame-image">
+                    <h3>Carason</h3>
+                
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('5pc Set', 500)">5pc Set: $500</button>
+                        
+                    </div>
+                </div>
+                <div class="frame-item">
+                    <img src="assets/canada-beds/CTO 377.jpg" alt="Frame 1" class="frame-image">
+                    <h3>CTO 377</h3>
+                
+                    <div class="button-group">
+                        <button class="futuristic-button" onclick="copyToClipboardWithNotification('CTO', 200)">CTO 377: $200</button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+
+           
+
+        </div>
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div id="notification-container" class="notification-container"></div>
+    <script src="js/canada-price-script.js"></script>
+   
+</body>
+</html>
