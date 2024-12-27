@@ -218,6 +218,105 @@
     </button>
 
     <div class="container">
+
+        <!-- Add this section before the closing div.container -->
+        <div class="section">
+            <h2>Quick Responses</h2>
+            <div class="response-grid">
+                <button onclick="copyToClipboard('Yes, it\'s available! Which size were you interested in?')">
+                    <span class="response-text">Yes, it's available! Which size were you interested in?</span>
+                    <span class="copy-indicator">Copy</span>
+                </button>
+        
+                <button
+                    onclick="copyToClipboard('Please let me know your city name so I can arrange the delivery time for you.')">
+                    <span class="response-text">Please let me know your city name so I can arrange the delivery time for
+                        you.</span>
+                    <span class="copy-indicator">Copy</span>
+                </button>
+        
+                <button
+                    onclick="copyToClipboard('We offer same-day delivery in most areas! Once you confirm your location, I can give you available time slots.')">
+                    <span class="response-text">We offer same-day delivery in most areas! Once you confirm your location, I can
+                        give you available time slots.</span>
+                    <span class="copy-indicator">Copy</span>
+                </button>
+        
+                <button
+                    onclick="copyToClipboard('Yes! All our mattresses come with a manufacturer\'s warranty. I\'d be happy to provide more details about the coverage.')">
+                    <span class="response-text">Yes! All our mattresses come with a manufacturer's warranty. I'd be happy to
+                        provide more details about the coverage.</span>
+                    <span class="copy-indicator">Copy</span>
+                </button>
+        
+                <button
+                    onclick="copyToClipboard('Our sets include both the premium mattress and matching box spring. You can also upgrade to a pillow top or euro top for just $35!')">
+                    <span class="response-text">Our sets include both the premium mattress and matching box spring. You can also
+                        upgrade to a pillow top or euro top for just $35!</span>
+                    <span class="copy-indicator">Copy</span>
+                </button>
+                
+                <button
+                    onclick="copyToClipboard('Great! For delivery, could you please provide your complete address?')">
+                    <span class="response-text">Great! For delivery, could you please provide your complete address?</span>
+                    <span class="copy-indicator">Copy</span>
+                </button>
+                
+                <button onclick="copyToClipboard('And what\'s the best phone number to reach you for delivery coordination?')">
+                    <span class="response-text">And what's the best phone number to reach you for delivery coordination?</span>
+                    <span class="copy-indicator">Copy</span>
+            </div>
+        </div>
+        
+        <!-- Add this CSS to the existing style section -->
+        <style>
+            .response-grid {
+                display: grid;
+                gap: 0.75rem;
+            }
+        
+            .response-grid button {
+                text-align: left;
+                padding: 1rem;
+                background: var(--card-bg);
+                color: var(--text);
+                border: 1px solid var(--card-border);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+            }
+        
+            .response-grid button:hover {
+                background: var(--card-bg);
+                border-color: var(--primary);
+                transform: translateY(-1px);
+            }
+        
+            .response-text {
+                flex: 1;
+                font-size: 0.95rem;
+                line-height: 1.4;
+            }
+        
+            .copy-indicator {
+                color: var(--primary);
+                font-size: 0.875rem;
+                font-weight: 500;
+                opacity: 0.8;
+                flex-shrink: 0;
+            }
+        
+            @media (max-width: 640px) {
+                .response-grid button {
+                    padding: 0.875rem;
+                }
+        
+                .response-text {
+                    font-size: 0.9rem;
+                }
+            }
+        </style>
         <h1>Premium Comfort at Amazing Prices!</h1>
 
         <div class="section">
@@ -246,6 +345,7 @@
                     <span class="description">Maximum comfort for the whole family</span>
                     <span class="copy-indicator">Copy</span>
                 </button>
+                
             </div>
         </div>
         
