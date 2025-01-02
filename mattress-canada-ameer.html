@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mattress Canada by Ameer Khan </title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='10' y='35' width='80' height='40' fill='%234CAF50' rx='5'/><rect x='5' y='75' width='90' height='10' fill='%23388E3C' rx='2'/><rect x='15' y='25' width='70' height='10' fill='%23A5D6A7' rx='2'/></svg>" />
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --dark: #1a1a1a;
+            --card: #2d2d2d;
+            --hover: #383838;
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .toggle-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .toggle-btn {
+            padding: 12px 24px;
+            background-color: var(--card);
+            border: 2px solid var(--primary);
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn.active {
+            background-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .toggle-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .size-btn {
+            background-color: var(--card);
+            border: none;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .size-btn:hover {
+            background-color: var(--hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .chat-btn {
+            background-color: var(--card);
+            border: none;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: left;
+            line-height: 1.4;
+            transition: all 0.3s ease;
+        }
+
+        .chat-btn:hover {
+            background-color: var(--hover);
+            transform: translateX(10px);
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .location-card {
+            background-color: var(--card);
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .location-card:hover {
+            background-color: var(--hover);
+            transform: translateY(-2px);
+        }
+
+        .copy-status {
+            color: var(--primary);
+            font-size: 0.9em;
+            margin-top: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .copy-status.visible {
+            opacity: 1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .category-section {
+            margin-bottom: 30px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .category-title {
+            color: var(--primary);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .notification.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Add visual feedback to buttons */
+        .size-btn.copied, .chat-btn.copied {
+            background-color: var(--primary);
+            transform: scale(0.98);
+        }
+
+        /* Make sure hover effect returns after copying */
+        .size-btn.copied:hover, .chat-btn.copied:hover {
+            transform: translateY(-2px);
+        }
+
+        .category-title {
+    color: var(--primary);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.delivery-charge {
+    color: var(--primary);
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.location-text {
+    font-size: 1.1em;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Mattress Price List</h1>
+        </div>
+
+        <div class="toggle-container">
+            <button class="toggle-btn active" data-section="prices">Prices</button>
+            <button class="toggle-btn" data-section="conversation">Conversation</button>
+            <button class="toggle-btn" data-section="locations">Locations</button>
+        </div>
+
+        <div id="prices" class="section active">
+            <!-- 5" FOAM Category -->
+            <div class="category-section">
+                <h2 class="category-title">5" FOAM</h2>
+                <div class="size-grid">
+                    <button class="size-btn" data-category="5\" FOAM" data-size="Single 3\"" data-price=" 40">Single
+                        3"</button>
+                    <button class="size-btn" data-category="5\" FOAM" data-size="Single 5\"" data-price=" 55">Single
+                        5"</button>
+                    <button class="size-btn" data-category="5\" FOAM" data-size="Double 5\"" data-price=" 80">Double
+                        5"</button>
+                    <button class="size-btn" data-category="5\" FOAM" data-size="Queen 5\"" data-price=" 100">Queen
+                        5"</button>
+                </div>
+            </div>
+
+            <!-- 7" FOAM Category -->
+            <div class="category-section">
+                <h2 class="category-title">7" FOAM</h2>
+                <div class="size-grid">
+                    <button class="size-btn" data-category="7\" FOAM" data-size="Single 7\"" data-price=" 75">Single
+                        7"</button>
+                    <button class="size-btn" data-category="7\" FOAM" data-size="Double 7\"" data-price=" 105">Double
+                        7"</button>
+                    <button class="size-btn" data-category="7\" FOAM" data-size="Queen 7\"" data-price=" 115">Queen
+                        7"</button>
+                    <button class="size-btn" data-category="7\" FOAM" data-size="King 7\"" data-price=" 180">King
+                        7"</button>
+                </div>
+            </div>
+
+            <!-- EUROTOP SPRING Category -->
+            <div class="category-section">
+                <h2 class="category-title">EUROTOP SPRING (10")</h2>
+                <div class="size-grid">
+                    <button class="size-btn" data-category="EUROTOP SPRING" data-size="Single 10\"" data-price="
+                        120">Single</button>
+                    <button class="size-btn" data-category="EUROTOP SPRING" data-size="Double 10\"" data-price="
+                        145">Double</button>
+                    <button class="size-btn" data-category="EUROTOP SPRING" data-size="Queen 10\"" data-price="
+                        150">Queen</button>
+                    <button class="size-btn" data-category="EUROTOP SPRING" data-size="King 10\"" data-price="
+                        240">King</button>
+                </div>
+            </div>
+
+            <!-- BOX-SPRINGS Category -->
+            <div class="category-section">
+                <h2 class="category-title">BOX-SPRINGS</h2>
+                <div class="size-grid">
+                    <button class="size-btn" data-category="BOX-SPRINGS" data-size="Single Box"
+                        data-price="55">Single</button>
+                    <button class="size-btn" data-category="BOX-SPRINGS" data-size="Double Box"
+                        data-price="60">Double</button>
+                    <button class="size-btn" data-category="BOX-SPRINGS" data-size="Queen Box"
+                        data-price="70">Queen</button>
+                    <button class="size-btn" data-category="BOX-SPRINGS" data-size="King Box"
+                        data-price="120">King</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conversation section remains the same -->
+        <div id="conversation" class="section">
+            <div class="chat-container">
+                <button class="chat-btn">Hello, are you looking for a brand new mattress and box spring?
+We sell only brand new factory packed products only at very reasonable prices.</button>
+                <button class="chat-btn">Could you please share your location/city so I can provide you with the exact delivery
+                    charges?</button>
+                <button class="chat-btn">We will deliver in 3 to 4 hours. Please send your full address and phone
+                    number</button>
+                <button class="chat-btn">Our driver will contact you shortly. Please confirm for delivery.</button>
+            </div>
+        </div>
+
+        <!-- Locations section remains the same -->
+        <!-- Locations section with delivery charges -->
+        <div id="locations" class="section">
+            <h2 class="category-title">Delivery Charges: $10-$15 + $0.75/KM</h2>
+            <div class="location-grid">
+                <!-- Group 1: $10 Delivery -->
+                <div class="location-card">
+                    <div class="location-text">Mississauga, Ontario</div>
+                    <div class="delivery-charge">Delivery: $10</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Brampton, Ontario</div>
+                    <div class="delivery-charge">Delivery: $10</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+        
+                <!-- Group 2: $15 Delivery -->
+                <div class="location-card">
+                    <div class="location-text">Scarborough, Ontario</div>
+                    <div class="delivery-charge">Delivery: $15</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">North York, Ontario</div>
+                    <div class="delivery-charge">Delivery: $15</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">East York, Ontario</div>
+                    <div class="delivery-charge">Delivery: $15</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">York, Ontario</div>
+                    <div class="delivery-charge">Delivery: $15</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Toronto, Ontario</div>
+                    <div class="delivery-charge">Delivery: $15</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Markham, Ontario</div>
+                    <div class="delivery-charge">Delivery: $15</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Vaughan, Ontario</div>
+                    <div class="delivery-charge">Delivery: $15</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+        
+                <!-- Group 3: $0.75/KM -->
+                <div class="location-card">
+                    <div class="location-text">Georgetown, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Orangeville, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Brantford, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Guelph, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Barrie, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Hamilton, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Waterloo, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Cambridge, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Kitchener, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Newmarket, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Richmond Hill, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Aurora, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Oshawa, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Whitby, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Ajax, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">King City, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Burlington, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Oakville, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Stouffville, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Pickering, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+                <div class="location-card">
+                    <div class="location-text">Caledon, Ontario</div>
+                    <div class="delivery-charge">Delivery: $0.75/KM</div>
+                    <div class="copy-status">Click to copy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle Functionality
+            const toggleBtns = document.querySelectorAll('.toggle-btn');
+            const sections = document.querySelectorAll('.section');
+
+            toggleBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const sectionId = btn.dataset.section;
+                    toggleBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === sectionId) {
+                            section.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Add notification div to body
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = 'Copied successfully! ✓';
+            document.body.appendChild(notification);
+
+            // Enhanced copy function with visual feedback
+            function copyToClipboard(text, button = null) {
+                text = text.replace(/\\"/g, '"');
+
+                navigator.clipboard.writeText(text).then(() => {
+                    notification.classList.add('show');
+
+                    if (button) {
+                        button.classList.add('copied');
+                        setTimeout(() => {
+                            button.classList.remove('copied');
+                        }, 500);
+                    }
+
+                    setTimeout(() => {
+                        notification.classList.remove('show');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
+            }
+
+            // Function to extract inch number from category or size
+            function getInchNumber(str) {
+                const match = str.match(/\d+/);
+                return match ? match[0] : "";
+            }
+
+            // Function to generate text based on product type
+            function generateText(size, category, price) {
+                const baseName = size.split(' ')[0]; // Get just "Single", "Double", etc.
+                const inches = getInchNumber(category);
+
+                // Format for BOX-SPRINGS
+                if (category === "BOX-SPRINGS") {
+                    return `Revolutionize Your Sleep!
+   🛏️ ${baseName} Size:
+📤 Supportive Box Spring.
+          💰 Exclusive Deal:
+           👉  $${price}  👈
+       { Box Spring }
+ Payment at delivery time{ Cash On Delivery }`;
+                }
+
+                // Format for EUROTOP SPRING
+                else if (category === "EUROTOP SPRING") {
+                    return `Revolutionize Your Sleep!
+   🛏️ ${baseName} Size EUROTOP SPRING:
+  ➡️Blissful Opulent 10-Inch Mattress, 
+          💰 Exclusive Deal:
+           👉  $${price}  👈
+       { Mattress }
+ Payment at delivery time{ Cash On Delivery }`;
+                }
+
+                // Format for regular FOAM mattresses
+                else {
+                    return `Revolutionize Your Sleep!
+   🛏️ ${baseName} Size Foam:
+  ➡️Blissful Opulent ${inches}-Inch Mattress, 
+          💰 Exclusive Deal:
+           👉  $${price}  👈
+       { Mattress }
+ Payment at delivery time{ Cash On Delivery }`;
+                }
+            }
+
+            // Size Button Functionality
+            const sizeBtns = document.querySelectorAll('.size-btn');
+
+            sizeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const price = parseInt(btn.dataset.price) + 40;
+                    const category = btn.dataset.category.replace(/\\/g, '"');
+                    const size = btn.dataset.size.replace(/\\/g, '"');
+
+                    const text = generateText(size, category, price);
+                    copyToClipboard(text, btn);
+                });
+            });
+
+            // Chat Button Functionality
+            const chatBtns = document.querySelectorAll('.chat-btn');
+
+            chatBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    copyToClipboard(btn.textContent, btn);
+                });
+            });
+
+            // Location Card Functionality
+            const locationCards = document.querySelectorAll('.location-card');
+
+                locationCards.forEach(card => {
+                    card.addEventListener('click', () => {
+                        // Only copy the location text, not the delivery charge
+                        const locationText = card.querySelector('.location-text').textContent.trim();
+                        copyToClipboard(locationText);
+
+                        const status = card.querySelector('.copy-status');
+                        status.textContent = 'Copied!';
+                        status.classList.add('visible');
+
+                        setTimeout(() => {
+                            status.classList.remove('visible');
+                            status.textContent = 'Click to copy';
+                        }, 2000);
+                    });
+                });
+    </script>
+
+
+</body>
+
+</html>
