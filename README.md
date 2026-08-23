@@ -9,7 +9,7 @@
 
   <!-- Dynamic Typing Animation Banner -->
   <a href="https://akuniverse.pages.dev/">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1000&color=58A6FF&center=true&vCenter=true&width=750&lines=⚡+Full-Stack+Next.js%2C+React+%26+Astro+Engineer;🤖+Enterprise+Web+Automation+%26+Facebook+Listing+Bots;🖥️+Linux+VPS+DevOps%2C+Nginx+%26+Docker+Infrastructure;🚀+High-Concurrency+Engines+in+Python%2C+Rust+%26+Node.js;🗄️+PostgreSQL%2C+MySQL%2C+MongoDB+%26+Redis+Specialist" alt="Typing SVG" />
+    <img src="assets/typing.svg" alt="Ameer Khan Skills Typing Banner" width="650" height="45" />
   </a>
 
   <br/><br/>
